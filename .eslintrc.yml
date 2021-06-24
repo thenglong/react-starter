@@ -25,6 +25,7 @@ rules:
   react/react-in-jsx-scope: off
   no-console: error
   no-unused-vars: error
+  no-undef: error
   react-hooks/rules-of-hooks: error
   react-hooks/exhaustive-deps: error
   import/no-unresolved: [2, { commonjs: true, amd: true }]
@@ -50,3 +51,6 @@ rules:
       alphabetize:
         order: asc
         caseInsensitive: true
+# ignorePatterns:
+# - "**/*.test.js"
+# - "**/vendor/*.js"
