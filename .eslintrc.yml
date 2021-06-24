@@ -1,0 +1,45 @@
+env:
+  browser: true
+  node: true
+  es2021: true
+extends:
+  - plugin:react/recommended
+  - plugin:prettier/recommended
+  - plugin:import/recommended
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+  - import
+rules:
+  prettier/prettier:
+    - error
+    - endOfLine: auto
+  react/react-in-jsx-scope: off
+  no-console: error
+  import/no-unresolved: [0, { commonjs: true, amd: true }]
+  import/named: 2
+  import/namespace: 2
+  import/default: 2
+  import/export: 2
+  import/order:
+    - error
+    - groups:
+        - builtin
+        - external
+        - internal
+        - - parent
+          - sibling
+      pathGroups:
+        - pattern: react
+          group: external
+          position: before
+      pathGroupsExcludedImportTypes:
+        - react
+      newlines-between: always
+      alphabetize:
+        order: asc
+        caseInsensitive: true
