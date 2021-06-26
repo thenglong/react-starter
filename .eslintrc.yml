@@ -18,6 +18,9 @@ plugins:
   - react-hooks
   - jsx-a11y
   - import
+settings:
+  react:
+    version: detect
 rules:
   prettier/prettier:
     - error
