@@ -27,7 +27,10 @@ rules:
     - endOfLine: auto
   react/react-in-jsx-scope: off
   no-console: error
-  no-unused-vars: error
+  no-unused-vars:
+    - 1
+    - args: after-used
+      argsIgnorePattern: "^_"
   no-unreachable: error
   no-undef: error
   react-hooks/rules-of-hooks: error
