@@ -4,7 +4,7 @@ import App from "./App"
 
 test("renders with logger link", () => {
   render(<App />)
-  const linkElement = screen.getByText(/With logger/i)
+  const linkElement = screen.getByText(/With debug logger/i)
   expect(linkElement).toBeInTheDocument()
 })
 
