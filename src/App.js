@@ -1,9 +1,9 @@
 import "./App.css"
-import log from "./logger"
+import logger from "./helpers/utils/logger"
 import logo from "./logo.svg"
 
 function App() {
-  log.info("App Component render")
+  logger.withTag("Hello").debug("Hello")
 
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          With logger
+          With debug logger
         </a>
       </header>
     </div>
